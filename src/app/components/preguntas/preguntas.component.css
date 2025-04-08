@@ -1,0 +1,135 @@
+/* Contenedor principal */
+.faq {
+  height: fit-content;
+}
+
+/* Estructura del layout */
+.faq__container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+@media (min-width: 768px) {
+  .faq__container {
+    flex-direction: row;
+  }
+}
+
+/* Encabezado */
+.faq__header {
+  flex: 5;
+}
+
+.faq__title {
+  /* font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem; */
+}
+
+.faq__description {
+  font-size: 1.125rem;
+  color: var(--color-texto);
+}
+
+/* Contenido de las preguntas */
+.faq__content {
+  flex: 7;
+}
+
+/* Pregunta destacada */
+.faq__item {
+  margin-bottom: 1.5rem;
+}
+
+.faq__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.faq__item-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq__toggle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.faq__toggle--active {
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.faq__toggle.plus {
+  color: #000;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Texto de la pregunta expandida */
+.faq__item-text {
+  color: var(--color-texto);
+}
+
+/* Lista de preguntas */
+.faq__list {
+  list-style: none;
+  padding: 0;
+}
+
+.faq__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d1d5db;
+  padding: 0.5rem 0;
+  flex-direction: column;
+}
+
+.faq__question-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.faq__question {
+  color: var(--color-titulo);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.faq__toggle {
+  font-size: 1rem;
+  color: var(--color-titulo);
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq__answer {
+  color: var(--color-texto);
+  display: none;
+  font-size: 0.8rem;
+}
+
+.faq__answer.active {
+  display: block;
+}

@@ -1,0 +1,27 @@
+<section class="container" id="gruas">
+  <header class="header">
+    <h2 class="header__title global-title">Trabajos Recientes de nuestras Grúas</h2>
+    <aside class="header__aside">
+      <p class="header__text">
+        Descubre algunos proyectos donde nuestras grúas han sido clave en la
+        ejecución de maniobras precisas. Montajes industriales, rescates
+        vehiculares, entre otros.
+      </p>
+    </aside>
+  </header>
+
+  <section class="slider">
+    <article
+      style="--i: {{ i + 1 }}"
+      class="slider__slide"
+      *ngFor="let s of [1, 2, 3, 4, 5, 6, 7, 8, 9]; let i = index"
+    >
+      <img
+        class="slider__image"
+        [src]="'../../../assets/img/img' + (1 + i) + '.jpg'"
+        alt="Servicio de Grúa - CENAL de Grúas"
+        loading="lazy"
+      />
+    </article>
+  </section>
+</section>

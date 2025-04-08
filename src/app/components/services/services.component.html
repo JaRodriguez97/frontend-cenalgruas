@@ -1,0 +1,37 @@
+<section class="container" id="servicios">
+  <header class="header">
+    <h2 class="header__title global-title">tipos de Servicios de Grúa Que Ofrecemos</h2>
+    <aside class="header__aside">
+      <p class="header__text">
+        Contamos con una presencia destacada en Cali, nuestra ciudad de origen,
+        desde donde operamos con eficiencia y rapidez. Nuestros servicios de
+        grúas se extienden a nivel nacional.
+      </p>
+      <button class="header__button">Solicitar Servicio de Grúa</button>
+    </aside>
+  </header>
+
+  <section class="slider">
+    <article
+      style="--i: {{ i + 1 }}"
+      class="slider__slide"
+      *ngFor="let s of servicesArray; let i = index"
+    >
+      <img
+        class="slider__image"
+        [src]="'../../../assets/img/servicio0' + (1 + i) + '.jpeg'"
+        [alt]="s.nombre"
+        loading="lazy"
+      />
+      <div class="slider__content">
+        <h3 class="slider__title">
+          {{ i >= 10 ? i + 1 : "0" + (i + 1) }}
+        </h3>
+        <p class="slider__description">
+          <strong>{{ s.nombre }}:</strong>
+          {{ s.descripcion }}
+        </p>
+      </div>
+    </article>
+  </section>
+</section>

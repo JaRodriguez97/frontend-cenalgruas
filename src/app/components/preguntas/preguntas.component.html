@@ -1,0 +1,39 @@
+<section class="faq__container container">
+  <header class="faq__header">
+    <h2 class="faq__title global-title">Top Preguntas y Respuestas.</h2>
+    <p class="faq__description">
+      Sus preguntas respondidas siempre que lo necesite.
+    </p>
+  </header>
+  <article class="faq__content">
+    <section class="faq__item faq__item--active">
+      <header class="faq__item-header">
+        <h2 class="faq__item-title global-title">
+          LLamanos, ordena tu servicio de grúa y disfruta.
+        </h2>
+        <button class="faq__toggle--active" (click)="toggleQuestions()">
+          <fa-icon class="faq__toggle plus" [icon]="faPlus"></fa-icon>
+        </button>
+      </header>
+      <p class="faq__item-text">
+        Sabemos que cuando necesitas una grúa, cada minuto cuenta. Por eso,
+        respondemos aquí las preguntas más comunes para que tengas claridad
+        total sobre nuestros tiempos, coberturas y costos antes de contactarnos.
+      </p>
+    </section>
+    <ul class="faq__list" *ngIf="showQuestions">
+      <li
+        class="faq__list-item"
+        *ngFor="let q of questionsAnswers; let i = index"
+      >
+        <button class="faq__question-button" (click)="toggleAnswer(i)">
+          <p class="faq__question">{{ q.pregunta }}</p>
+          <fa-icon class="faq__toggle" [icon]="faPlus"></fa-icon>
+        </button>
+        <p [ngClass]="{ faq__answer: true, active: q.active }">
+          {{ q.respuesta }}
+        </p>
+      </li>
+    </ul>
+  </article>
+</section>

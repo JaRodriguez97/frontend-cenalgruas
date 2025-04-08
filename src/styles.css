@@ -1,1 +1,241 @@
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("./assets/fonts/Ethnocentric-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Ethnocentric-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #7ec347;
+  --primary-color-opacity: #7ec34780;
+  --color-titulo: #b1ceb5;
+  --color-texto: #bbbcbb;
+}
+
+/* Box sizing y márgenes/paddings en 0 */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+  font-family: "Ethnocentric", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Tipografía por defecto */
+body {
+  -webkit-font-smoothing: antialiased;
+  scroll-padding-top: 2em;
+  line-height: 1.5;
+  font-family: inherit;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  background-color: #000000;
+  background-image: url("./assets/floating-cogs.svg");
+}
+
+/* Encabezados sin estilos predeterminados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--color-titulo);
+}
+
+/* Listas sin estilos */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Imágenes como elementos de bloque y alineadas */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+/* Botones sin estilos por defecto */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Quitar la apariencia nativa de botones y selects en algunos navegadores */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  background-color: transparent;
+  background-image: none;
+}
+
+/* Quitar estilos del foco en algunos navegadores */
+[role="button"],
+button {
+  cursor: pointer;
+}
+
+/* Normalización de enlaces */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+p {
+  color: inherit;
+  text-wrap: pretty;
+}
+
+strong {
+  color: var(--primary-color);
+}
+
+span {
+  color: var(--primary-color-opacity);
+}
+
+/* Quitar estilos predeterminados de tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Normalizar textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Ocultar elementos con hidden */
+[hidden] {
+  display: none;
+}
+
+/* ===== Contenedor Principal ===== */
+.container {
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+@media (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+section.container {
+  padding: 56px 64px;
+  display: flex;
+  gap: 80px;
+  height: 864px;
+  min-height: fit-content;
+}
+
+@media (max-width: 770px) {
+  section.container {
+    padding: 64px 20px;
+    height: fit-content;
+    flex-direction: column;
+  }
+}
+
+.link {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.link:hover {
+  /* opacity: 0.8; */
+  color: var(--primary-color-opacity);
+}
+
+/* Estilo global para títulos de componentes */
+.global-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+  color: var(--color-titulo);
+  text-align: left;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Testimonials section */
+.testimonials__title.global-title {
+  text-align: center;
+}
+
+/* Real estate section */
+.real-estate__title.global-title {
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.faq__item-title.global-title {
+  font-size: 1.8rem;
+  line-height: 2.25rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .global-title {
+    font-size: 1.8rem;
+    line-height: 2.25rem;
+    text-align: center; /* Center all titles by default on mobile */
+  }
+
+  .real-estate__title.global-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  .faq__item-title.global-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  .global-title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  .real-estate__title.global-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}

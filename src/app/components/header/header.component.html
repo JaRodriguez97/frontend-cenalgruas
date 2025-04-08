@@ -1,0 +1,51 @@
+<!-- <button class="menu-btn mobile" id="menu-btn">
+  <fa-icon [icon]="faBars"></fa-icon>
+</button> -->
+
+<header class="header container" (click)="toggleMenu()">
+  <a class="header__logo link" href="#">
+    <strong class="header__logo-text">Cenal</strong>
+    <strong class="header__logo-text">Grúas</strong>
+  </a>
+
+  <nav
+    class="header__nav"
+    [class.open]="isMenuOpen"
+    aria-label="Navegación principal"
+  >
+    <ul class="header__nav-list">
+      <li class="header__nav-item">
+        <a class="link" href="#servicios">Servicios</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="link" href="#testimonios">Testimonios</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="link" href="#gruas">Grúas</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="link" href="#preguntas">Preguntas</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- redes sociales -->
+
+  <ul class="header__social">
+    <li>
+      <a class="link" href="#">
+        <fa-icon [icon]="faFacebook"></fa-icon>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="#">
+        <fa-icon [icon]="faTikTok"></fa-icon>
+      </a>
+    </li>
+    <li>
+      <a class="link" href="#">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </a>
+    </li>
+  </ul>
+</header>

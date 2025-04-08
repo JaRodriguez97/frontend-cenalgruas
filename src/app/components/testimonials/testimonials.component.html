@@ -1,0 +1,36 @@
+<section class="testimonials container" id="testimonios">
+  <header class="testimonials__header">
+    <h2 class="testimonials__title global-title">
+      Mira lo que dicen nuestros clientes del Servicio de Grúa
+    </h2>
+  </header>
+
+  <article class="testimonials__content">
+    <blockquote class="testimonial">
+      <span class="testimonial__author">
+        <p class="testimonial__name">{{ testimonialsArray[i].nombre }}</p>
+        <p class="testimonial__role">{{ testimonialsArray[i].rol }}</p>
+      </span>
+      <p class="testimonial__text">{{ testimonialsArray[i].texto }}</p>
+      <nav class="testimonial__navigation">
+        <button class="testimonial__button testimonial__button--prev" (click)="prev()">
+          <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </button>
+        <button class="testimonial__button testimonial__button--next" (click)="next()">
+          <fa-icon [icon]="faChevronRight"></fa-icon>
+        </button>
+      </nav>
+    </blockquote>
+
+    <figure class="testimonial__image-container">
+      <img
+        [src]="testimonialsArray[i].imagen"
+        [alt]="testimonialsArray[i].descripcionImagen"
+        [title]="testimonialsArray[i].descripcionImagen"
+        class="testimonial__image"
+        width="300"
+        height="300"
+      />
+    </figure>
+  </article>
+</section>

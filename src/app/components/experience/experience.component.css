@@ -1,0 +1,102 @@
+/* Estilos generales */
+.section {
+  flex-direction: column;
+  max-height: 864px;
+  height: fit-content;
+}
+
+/* Header */
+.section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .section__header {
+    flex-direction: row;
+    gap: 5%;
+  }
+}
+
+.section__title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+.section__description {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .section__description {
+    width: 90%;
+  }
+}
+
+.section__text {
+  color: var(--color-texto);
+  font-size: 0.88em;
+  text-align: left;
+}
+
+.section__button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  width: 50%;
+}
+
+.section__button:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Stats */
+.section__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  /* .section__stats {
+  } */
+}
+
+/* Cards */
+.stat-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 30%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.stat-card__number {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.stat-card__text {
+  color: #4b5563;
+}
