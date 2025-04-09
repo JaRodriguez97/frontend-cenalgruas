@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LandingRoutingModule } from './landing-routing.module';
 import { LandingComponent } from './landing.component';
 import { PreguntasComponent } from '@components/preguntas/preguntas.component';
+import { FooterComponent } from '@components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PreguntasComponent } from '@components/preguntas/preguntas.component';
     TestimonialsComponent,
     GruasComponent,
     PreguntasComponent,
+    FooterComponent
   ],
   imports: [CommonModule, LandingRoutingModule, FontAwesomeModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

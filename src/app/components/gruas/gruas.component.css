@@ -1,6 +1,7 @@
 .container {
   flex-direction: column;
   padding: 56px 0;
+  height: fit-content;
 }
 
 .header {
@@ -19,8 +20,8 @@
 }
 
 .header__title {
-  text-align: left;  /* Keep this as it's specific to this component */
-  width: 100%;       /* Keep this as it's specific to this component */
+  text-align: left; /* Keep this as it's specific to this component */
+  width: 100%; /* Keep this as it's specific to this component */
 }
 
 .header__aside {

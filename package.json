@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "c": "ng g c components/preguntas --skip-import",
+    "c": "ng g c components/footer --skip-import",
     "d": "ng generate directive directives/dynamicTag --skip-import",
     "m": "ng g m modules/landing/landing -m=app --route landing --flat",
     "s": "ng g s services/Landing/landing",

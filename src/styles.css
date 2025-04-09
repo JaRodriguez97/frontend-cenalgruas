@@ -39,8 +39,9 @@ body {
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  background-color: #000000;
+  background-color: #000;
   background-image: url("./assets/floating-cogs.svg");
+  background-attachment: fixed;
 }
 
 /* Encabezados sin estilos predeterminados */

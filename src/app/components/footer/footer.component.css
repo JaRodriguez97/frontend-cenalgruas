@@ -1,0 +1,139 @@
+.footer {
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer__container {
+  height: fit-content;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer__content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.footer__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 60%;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .footer__header {
+    width: 40%;
+  }
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: 1.2rem;
+    width: 16ch;
+  }
+}
+
+.footer__description {
+  font-size: 0.6rem;
+  color: var(--color-texto);
+}
+
+@media (min-width: 768px) {
+  .footer__description {
+    font-size: 0.8rem;
+  }
+}
+
+.footer__button {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.footer__button:hover {
+  opacity: 0.8;
+}
+
+.footer__icon {
+  margin-left: 0.5rem;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer__nav {
+    width: 55%;
+  }
+}
+
+.footer__section {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .footer__section {
+    width: auto;
+  }
+}
+
+.footer__section-title {
+  font-weight: bolder;
+  font-size: 0.5rem;
+}
+
+.footer__list {
+}
+
+.footer__link {
+  display: block;
+  font-size: 0.6rem;
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+@media (min-width: 768px) {
+  .footer__link {
+    font-size: 0.5rem;
+  }
+}
+
+.footer__background-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__word {
+  font-weight: bold;
+  font-style: italic;
+  color: #fff2;
+  font-size: clamp(4rem, 20vw, 285px);
+}
