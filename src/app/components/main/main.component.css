@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 64px 20px;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
@@ -19,11 +19,13 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
   .main__intro {
     width: 60%;
+    gap: 0;
   }
 }
 
@@ -32,9 +34,17 @@
 }
 
 .intro-header__title {
-  font-size: 2.88rem;
-  font-weight: 300;
+  font-size: clamp(1.6rem, calc(2vw + 1rem), 2.88rem);
+  font-weight: bolder;
   text-align: left;
+  text-wrap: balance;
+}
+
+@media (max-width: 368px) {
+  .intro-header__title {
+    font-size: calc(2.6vw + 1rem);
+    text-align: center;
+  }
 }
 
 .intro-header__highlight {
@@ -60,17 +70,19 @@
 .intro-figure__image {
   width: 100%;
   border-radius: 0.5rem;
+  height: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .intro-figure__caption {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  color: var(--color-texto);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.5rem 1rem;
+  color: #000;
+  background: var(--primary-color-opacity);
+  padding: 0.5rem;
   border-radius: 9999px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,6 +96,10 @@
 
 .intro-figure__caption fa-icon {
   font-size: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Testimonial */
@@ -108,6 +124,13 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 1em;
+  border: 1px solid var(--primary-color-opacity);
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    margin: 0;
+  }
 }
 
 .testimonial__header {
@@ -150,16 +173,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: 0.3rem;
   transition: all 500ms ease;
+  text-align: center;
+  text-wrap: balance;
 }
 
 .real-estate__figure {
-  width: 100%;
+  width: fit-content;
 }
 
 .real-estate__image {
-  width: 100%;
   border-radius: 0.5rem;
 }
 

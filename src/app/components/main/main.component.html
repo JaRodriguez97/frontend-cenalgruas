@@ -3,20 +3,21 @@
     <section class="main__intro">
       <header class="intro-header">
         <h1 class="intro-header__title">
-          Servicio de
-          <strong class="intro-header__highlight">Grúa:</strong> Central
-          <strong class="intro-header__highlight">Nacional de Grúas</strong> y
-          niñeras
+          <strong class="intro-header__highlight"> Servicio de Grúa: </strong>
+          Central Nacional
+          <strong class="intro-header__highlight">Grúas y niñeras</strong>
         </h1>
       </header>
 
       <figure class="intro-figure">
         <img
           src="../../../assets/img/nosotrosCopia.jpg"
-          alt="Modern home with large glass windows and a unique architectural design"
+          alt="Servicio de grúa con maquinaria moderna y tecnología de punta"
           class="intro-figure__image"
           width="600"
           height="400"
+          loading="lazy"
+          (load)="loadFirstImgMain()"
         />
         <a
           class="intro-figure__caption"
@@ -57,11 +58,14 @@
       <article class="real-estate">
         <figure class="real-estate__figure">
           <img
+            *ngIf="publicService.imgIndex"
             src="../../../assets/img/logoGruasTransparente.png"
-            alt="Modern real estate building with a unique design"
+            alt="Logo de Cenal Grúas"
             class="real-estate__image"
             width="300"
             height="200"
+            loading="lazy"
+            (load)="loadSecondImgMain()"
           />
         </figure>
         <header class="real-estate__header">

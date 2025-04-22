@@ -6,6 +6,7 @@ import {
   faStar,
   faStarHalf,
 } from '@fortawesome/free-solid-svg-icons';
+import { PublicService } from '@services/Public/public.service';
 
 @Component({
   selector: 'app-main',
@@ -18,4 +19,14 @@ export class MainComponent {
   faStar = faStar;
   faStarHalf = faStarHalf;
   faPhone = faPhone;
+
+  constructor(public publicService: PublicService) {}
+
+  loadFirstImgMain() {
+    this.publicService.imgIndex = true;
+  }
+
+  loadSecondImgMain() {
+    this.publicService.imgNosotros = true;
+  }
 }
