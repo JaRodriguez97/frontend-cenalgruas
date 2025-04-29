@@ -184,7 +184,7 @@ section.container {
 
 /* Estilo global para títulos de componentes */
 .global-title {
-  font-size: 2.5rem;
+  font-size: clamp(calc(2.2vw + 0.8rem), calc(2.2vw + 0.8rem), 2.5rem);
   font-weight: bold;
   line-height: 3rem;
   color: var(--color-titulo);
@@ -212,7 +212,6 @@ section.container {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .global-title {
-    font-size: 1.8rem;
     line-height: 2.25rem;
     text-align: center; /* Center all titles by default on mobile */
   }
@@ -231,7 +230,6 @@ section.container {
 /* Small screen adjustments */
 @media (max-width: 480px) {
   .global-title {
-    font-size: 1.5rem;
     line-height: 1.8rem;
   }
 

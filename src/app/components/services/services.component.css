@@ -3,24 +3,21 @@
   padding: 56px 0;
 }
 
+/* Header */
 .header {
-  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 5%;
-  padding: 0 64px;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-@media (max-width: 770px) {
+@media (min-width: 768px) {
   .header {
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+    align-items: flex-end;
   }
-}
-
-.header__title {
-  /* text-align: left;  Keep this as it's specific to this component */
-  /* width: 100%;      Keep this as it's specific to this component */
 }
 
 .header__aside {
@@ -69,6 +66,23 @@
   justify-content: space-between;
   height: 550px;
   animation: scroll 60s linear infinite;
+  animation-play-state: running;
+}
+
+.slider:hover .slider__slide {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /* .slider__slide:hover {
@@ -82,6 +96,25 @@
   width: auto;
 }
 
+@media (max-width: 770px) {
+  .header__aside {
+    align-items: center;
+  }
+
+  .header__text {
+    text-align: center;
+  }
+
+  .slider__slide {
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  .slider__image {
+    height: calc(100px + 30vw);
+  }
+}
+
 .slider__content {
   display: flex;
   gap: 16px;
@@ -90,7 +123,7 @@
 .slider__title {
   font-size: clamp(1.25em, 8vw, 3em);
   font-weight: bold;
-  line-height: 0.5em;
+  line-height: 1em;
 }
 
 .slider__description {
@@ -101,16 +134,4 @@
   align-items: flex-start;
   justify-content: center;
   text-align: left;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-400%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
 }

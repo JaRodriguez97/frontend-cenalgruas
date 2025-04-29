@@ -14,11 +14,12 @@
   </header>
 
   <section class="slider">
-    <article
+    <article 
       style="--i: {{ i + 1 }}"
       class="slider__slide"
       *ngFor="let s of servicesArray; let i = index"
     >
+    <!-- elementos article estan quedando muy atras en la animación responsive -->
       <img
         class="slider__image"
         [src]="'../../../assets/img/servicio0' + (1 + i) + '.jpeg'"

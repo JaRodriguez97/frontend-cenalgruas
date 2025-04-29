@@ -9,26 +9,24 @@
 .section__header {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
+  gap: 15px;
 }
 
 @media (min-width: 768px) {
   .section__header {
     flex-direction: row;
     gap: 5%;
+    align-items: flex-end;
   }
 }
 
 .section__title {
-  font-size: 2.5rem;
-  line-height: 3rem;
-  width: 100%;
-  font-weight: bold;
+  width: 90%;
 }
 
 .section__description {
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -37,15 +35,22 @@
 }
 
 @media (min-width: 768px) {
+  .section__title {
+    width: 100%;
+  }
+
   .section__description {
     width: 90%;
+  }
+  .section__text {
+    text-align: left;
   }
 }
 
 .section__text {
   color: var(--color-texto);
   font-size: 0.88em;
-  text-align: left;
+  text-align: center;
 }
 
 .section__button {
@@ -58,11 +63,20 @@
   box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
   width: fit-content;
+  text-decoration: none;
 }
 
 .section__button:hover {
   opacity: 0.8;
   box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .section__button {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 /* Stats */
@@ -101,12 +115,12 @@
 }
 
 .stat-card__number {
-  font-size: clamp(1.5rem, calc(2.2vw + 0.8rem), 3rem);
+  font-size: clamp(2rem, calc(2.2vw + 0.8rem), 3rem);
   font-weight: bold;
   line-height: 3rem;
 }
 
 .stat-card__text {
-  color: #4b5563;
+  color: #595858;
   font-size: clamp(1rem, 1vw, 1.88rem);
 }
