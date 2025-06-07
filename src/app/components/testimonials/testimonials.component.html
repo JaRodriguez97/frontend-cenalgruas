@@ -13,10 +13,16 @@
       </span>
       <p class="testimonial__text">{{ testimonialsArray[i].texto }}</p>
       <nav class="testimonial__navigation">
-        <button class="testimonial__button testimonial__button--prev" (click)="prev()">
+        <button
+          class="testimonial__button testimonial__button--prev"
+          (click)="prev()"
+        >
           <fa-icon [icon]="faChevronLeft"></fa-icon>
         </button>
-        <button class="testimonial__button testimonial__button--next" (click)="next()">
+        <button
+          class="testimonial__button testimonial__button--next"
+          (click)="next()"
+        >
           <fa-icon [icon]="faChevronRight"></fa-icon>
         </button>
       </nav>

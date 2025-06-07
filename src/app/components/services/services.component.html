@@ -9,17 +9,23 @@
         desde donde operamos con eficiencia y rapidez. Nuestros servicios de
         grúas se extienden a nivel nacional.
       </p>
-      <button class="header__button">Solicitar Servicio de Grúa</button>
+      <a
+        href="https://wa.me/57152150074"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header__button"
+        >Solicitar Servicio de Grúa</a
+      >
     </aside>
   </header>
 
   <section class="slider">
-    <article 
+    <article
       style="--i: {{ i + 1 }}"
       class="slider__slide"
       *ngFor="let s of servicesArray; let i = index"
     >
-    <!-- elementos article estan quedando muy atras en la animación responsive -->
+      <!-- elementos article estan quedando muy atras en la animación responsive -->
       <img
         class="slider__image"
         [src]="'../../../assets/img/servicio0' + (1 + i) + '.jpeg'"

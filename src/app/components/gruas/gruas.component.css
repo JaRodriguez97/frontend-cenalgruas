@@ -1,42 +1,22 @@
 .container {
-  flex-direction: column;
   padding: 56px 0;
-  height: fit-content;
+  flex-direction: column;
 }
 
 .header {
   text-align: center;
   display: flex;
   align-items: center;
-  gap: 5%;
-  padding: 0 64px;
-}
-
-@media (max-width: 770px) {
-  .header {
-    flex-direction: column;
-    justify-content: center;
-  }
+  gap: 5svh;
 }
 
 .header__title {
-  text-align: left; /* Keep this as it's specific to this component */
-  width: 100%; /* Keep this as it's specific to this component */
-}
-
-.header__aside {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 16px;
-  height: 100%;
-  justify-content: space-evenly;
-  width: 90%;
 }
 
 .header__text {
   color: var(--color-texto);
   text-align: left;
+  width: 90%;
 }
 
 .header__button {
@@ -91,5 +71,24 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+@media (max-width: 770px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header__title {
+    text-align: center;
+  }
+
+  .header__text {
+    text-align: center;
+  }
+
+  .slider__image {
+    height: 250px;
   }
 }

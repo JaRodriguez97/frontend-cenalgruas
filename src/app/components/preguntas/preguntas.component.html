@@ -12,7 +12,11 @@
           LLamanos, ordena tu servicio de grúa y disfruta.
         </h2>
         <button class="faq__toggle--active" (click)="toggleQuestions()">
-          <fa-icon class="faq__toggle plus" [icon]="faPlus"></fa-icon>
+          <fa-icon
+            class="faq__toggle plus"
+            [icon]="faPlus"
+            *ngIf="!showQuestions"
+          ></fa-icon>
         </button>
       </header>
       <p class="faq__item-text">

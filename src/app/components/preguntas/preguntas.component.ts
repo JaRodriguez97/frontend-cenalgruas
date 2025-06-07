@@ -8,6 +8,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 })
 export class PreguntasComponent {
   faPlus = faPlus;
+  showQuestions: boolean = false;
   questionsAnswers = [
     {
       pregunta: 'Can I buy a home with bad credit?',
@@ -27,14 +28,7 @@ export class PreguntasComponent {
         'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem',
       active: false,
     },
-    {
-      pregunta: 'How do I choose the right real estate agent?',
-      respuesta:
-        'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem',
-      active: false,
-    },
   ];
-  showQuestions: boolean = false;
 
   toggleAnswer(i: number) {
     this.questionsAnswers.forEach((q, index) => {
