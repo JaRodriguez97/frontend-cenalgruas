@@ -15,11 +15,11 @@
   width: 100%;
 }
 
-.faq__title {
-  /* font-size: 2.5rem;
+ /*.faq__title {
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1rem; */
-}
+  margin-bottom: 1rem; 
+}*/
 
 .faq__description {
   font-size: 1.125rem;
@@ -32,9 +32,9 @@
   width: 90%;
 }
 
-/* Pregunta destacada */
+/* Pregunta destacada 
 .faq__item {
-}
+}*/
 
 .faq__item-header {
   display: flex;

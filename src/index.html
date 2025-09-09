@@ -1,18 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>CenalGruas</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO básico -->
+    <title>
+      Gruas Cali | Central Nacional de Gruas (CENAL) - Servicio de Grua 24 horas
+    </title>
+    <meta
+      name="description"
+      content="Gruas Cali - Central Nacional de Gruas (CENAL). Servicio de grua cerca de mi, grua 24 horas Cali, grua economica Cali, traslado de vehiculos, asistencia vehicular urgente. Expertos en servicio de grua en Cali."
+    />
+    <meta
+      name="keywords"
+      content="gruas cali, servicio de grua, servicio de grua cerca de mi, grua 24 horas cali, grua economica cali, grua para carros cali, traslado vehiculos cali, grua urgente cali, asistencia vehicular cali"
+    />
+    <meta name="author" content="JA__RG | Arquitecto de Software" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="es" />
+    <meta name="theme-color" content="#7ec347" />
+    <meta name="application-name" content="Central Nacional de Gruas - CENAL" />
+    <meta name="generator" content="HTML5" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cenalgruas.netlify.app" />
+    <meta
+      property="og:title"
+      content="Gruas Cali | Central Nacional de Gruas (CENAL)"
+    />
+    <meta
+      property="og:description"
+      content="Servicio de grua 24 horas en Cali. Grua economica, urgente y confiable. Traslado de vehiculos y asistencia vehicular en Cali."
+    />
+    <meta
+      property="og:image"
+      content="https://cenalgruas.netlify.app/assets/img/logoGruasTransparente.png"
+    />
+    <meta property="og:site_name" content="Central Nacional de Gruas - CENAL" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://cenalgruas.netlify.app" />
+    <meta
+      name="twitter:title"
+      content="Gruas Cali | Central Nacional de Gruas (CENAL)"
+    />
+    <meta
+      name="twitter:description"
+      content="Servicio de grua 24 horas en Cali. Grua economica, urgente y confiable. Traslado de vehiculos y asistencia vehicular en Cali."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cenalgruas.netlify.app/assets/img/logoGruasTransparente.png"
+    />
+
+    <!-- Favicons / Iconos -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/logoTransparente.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/img/logoTransparente.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/img/logoTransparente.png"
+    />
+    <link
+      rel="mask-icon"
+      href="./assets/img/logoTransparente.png"
+      color="#7ec347"
+    />
+    <!-- <link rel="manifest" href="manifest.json" /> -->
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#7ec347" />
+    <meta
+      name="msapplication-TileImage"
+      content="./assets/img/logoTransparente.png"
+    />
+
+    <!-- Preloads -->
     <link
       rel="preload"
-      href="./assets/fonts/Ethnocentric.woff2"
+      href="./assets/fonts/Ethnocentric-Regular.woff2"
       as="font"
       type="font/woff2"
-      crossorigin="anonymous"
+      crossorigin
     />
+    <link rel="preload" href="./assets/img/logoTransparente.png" as="image" />
+    <link rel="preload" href="./assets/img/nosotrosCopia.jpg" as="image" />
+    <link
+      rel="preload"
+      href="./assets/img/logoGruasTransparente.png"
+      as="image"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Central Nacional de Gruas (CENAL)",
+        "alternateName": "Gruas Cali CENAL",
+        "url": "https://cenalgruas.netlify.app",
+        "logo": "https://cenalgruas.netlify.app/assets/img/logoTransparente.png",
+        "image": "https://cenalgruas.netlify.app/assets/img/logoGruasTransparente.png",
+        "description": "Gruas Cali - Servicio de grua 24 horas, grua economica en Cali, asistencia vehicular, traslado de vehiculos y grua urgente cerca de ti.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cali",
+          "addressRegion": "Valle del Cauca",
+          "addressCountry": "CO"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Cali"
+        },
+        "telephone": "+573185051107",
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "keywords": "gruas cali, servicio de grua, servicio de grua cerca de mi, grua 24 horas cali, grua economica cali, grua para carros cali, traslado vehiculos cali, grua urgente cali, asistencia vehicular cali"
+      }
+    </script>
   </head>
   <body>
     <app-root></app-root>
